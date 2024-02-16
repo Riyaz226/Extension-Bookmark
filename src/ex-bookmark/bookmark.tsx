@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import StarPurple500Icon from '@mui/icons-material/StarPurple500';
 import EditIcon from '@mui/icons-material/Edit';
+import MicIcon from '@mui/icons-material/Mic';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -101,7 +102,7 @@ function Bookmark() {
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder='Google Search...'
           />
-          <button onClick={handleSearch}>:Search</button>
+          <button onClick={handleSearch}>:<MicIcon/></button>
       </div>
       <hr />
       <div style={{ marginTop: '23px' }}>

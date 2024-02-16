@@ -2490,6 +2490,29 @@ var _default = exports["default"] = (0, _createSvgIcon.default)( /*#__PURE__*/(0
 
 /***/ }),
 
+/***/ "./node_modules/@mui/icons-material/Mic.js":
+/*!*************************************************!*\
+  !*** ./node_modules/@mui/icons-material/Mic.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+"use client";
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var _default = exports["default"] = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3m5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72z"
+}), 'Mic');
+
+/***/ }),
+
 /***/ "./node_modules/@mui/icons-material/StarPurple500.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@mui/icons-material/StarPurple500.js ***!
@@ -49137,11 +49160,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mui_icons_material_StarPurple500__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/icons-material/StarPurple500 */ "./node_modules/@mui/icons-material/StarPurple500.js");
-/* harmony import */ var _mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/Edit */ "./node_modules/@mui/icons-material/Edit.js");
+/* harmony import */ var _mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/Edit */ "./node_modules/@mui/icons-material/Edit.js");
+/* harmony import */ var _mui_icons_material_Mic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/Mic */ "./node_modules/@mui/icons-material/Mic.js");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
-/* harmony import */ var react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/Modal */ "./node_modules/react-bootstrap/esm/Modal.js");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/Modal */ "./node_modules/react-bootstrap/esm/Modal.js");
 /* harmony import */ var _bookmark_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bookmark.css */ "./src/ex-bookmark/bookmark.css");
+
 
 
 
@@ -49224,7 +49249,9 @@ function Bookmark() {
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_StarPurple500__WEBPACK_IMPORTED_MODULE_3__["default"], { className: "text-purple-500 hover:text-blue-500" })),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", value: searchTerm, onChange: (e) => setSearchTerm(e.target.value), placeholder: 'Google Search...' }),
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { onClick: handleSearch }, ":Search")),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { onClick: handleSearch },
+                ":",
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Mic__WEBPACK_IMPORTED_MODULE_4__["default"], null))),
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null),
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { style: { marginTop: '23px' } },
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null,
@@ -49242,17 +49269,17 @@ function Bookmark() {
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", { style: { width: '345px' } },
                             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", { href: bookmark.url, target: "_blank", rel: "noopener noreferrer", style: { textDecoration: 'none', color: '#5d5d5d' } }, bookmark.name)),
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null,
-                            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_4__["default"], { style: { fontSize: '13px', cursor: 'pointer' }, onClick: () => handleShow(index) }))))))))),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_5__["default"], { show: show, onHide: handleClose, animation: false },
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_5__["default"].Body, { id: "bo" },
+                            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_5__["default"], { style: { fontSize: '13px', cursor: 'pointer' }, onClick: () => handleShow(index) }))))))))),
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6__["default"], { show: show, onHide: handleClose, animation: false },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6__["default"].Body, { id: "bo" },
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", { src: "./icon3.png", alt: "" }),
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null,
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", { style: { fontSize: "18px" } }, "Bookmark added"),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", value: linkName, onChange: (e) => setLinkName(e.target.value) }),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", value: selectedBookmark !== null ? bookmarks[selectedBookmark].url : '' }))),
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, null,
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6__["default"], { variant: "primary", onClick: handleClick }, "Done"),
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6__["default"], { variant: "danger", onClick: handleClose }, "Remove")))));
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_6__["default"].Footer, null,
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], { variant: "primary", onClick: handleClick }, "Done"),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], { variant: "danger", onClick: handleClose }, "Remove")))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Bookmark);
 
