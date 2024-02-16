@@ -86,8 +86,7 @@ function Bookmark() {
     }
   };
     
-  
-  return (
+return (
     <>
       <div className="text-center">
         <h2 style={{ textDecoration: 'underline', marginTop: '8px' }}>Bookmark Extension:</h2>
