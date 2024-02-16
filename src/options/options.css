@@ -1,0 +1,37 @@
+#his{
+    margin-top: 36px;
+    text-align: center;
+}
+h3{
+    color:rosybrown;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 23px;
+}
+table{
+font-family: Raleway;
+font-size: 17px;
+}
+/*Model Box*/
+#bo {
+    display: flex;
+}
+#bo > img{
+    width: 119px;
+    height: 92px;
+    margin-left: 12px;
+}
+#bo > div{
+    padding-top: 2px;
+    padding-left: 39px;
+}
+#bo > div >input{
+border: 1px solid rosybrown;
+margin-top: 6px;
+border-radius: 4px;
+width: 227px;
+}
+#bo > div >input:hover{
+    border: 1px solid blue;
+}
+    

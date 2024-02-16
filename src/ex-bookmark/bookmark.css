@@ -1,0 +1,56 @@
+body {
+    font-family: Raleway;
+    height: 240px;
+    width: 440px;
+    border-radius: 18px;
+ overflow-x: scroll;
+}
+.rt{
+    display: flex;
+    justify-content: center;
+ margin-top: 5px;
+}
+h2{
+    font-size: 21px;
+}
+button{
+    font-size: 15px;
+    margin-top:12px; 
+}
+span{
+    display: flex;
+    justify-content: space-around;
+}
+h3{
+    color: blue;
+    top:13px;
+    font-size: 15px;
+}
+
+table{
+    font-size: 14px;
+    width: 404px;
+}
+
+/*Box Model*/
+#bo {
+    display: flex;
+}
+#bo > img{
+    width: 123px;
+    height: 94px;
+}
+#bo > div{
+    padding-top: 2px;
+    padding-left: 29px;
+}
+#bo > div >input{
+border: 1px solid rosybrown;
+margin-top: 6px;
+border-radius: 4px;
+width: 217px;
+}
+#bo > div >input:hover{
+    border: 1px solid blue;
+}
+    
