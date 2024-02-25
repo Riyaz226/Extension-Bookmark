@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Raleway;
     height: 240px;
     width: 440px;
@@ -31,9 +31,9 @@ table{
     font-size: 14px;
     width: 404px;
 }
-
+ 
 /*Box Model*/
-#bo {
+/*#bo {
     display: flex;
 }
 #bo > img{
@@ -53,4 +53,9 @@ width: 217px;
 #bo > div >input:hover{
     border: 1px solid blue;
 }
+    */
+#img{
+        width: 29px;
+        height: 28px;
+    }
     

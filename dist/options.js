@@ -2467,29 +2467,6 @@ var weakMemoize = function weakMemoize(func) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/AccountBox.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@mui/icons-material/AccountBox.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-"use client";
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
-var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-var _default = exports["default"] = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6m7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58z"
-}), 'AccountBox');
-
-/***/ }),
-
 /***/ "./node_modules/@mui/icons-material/Delete.js":
 /*!****************************************************!*\
   !*** ./node_modules/@mui/icons-material/Delete.js ***!
@@ -2533,6 +2510,29 @@ var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/r
 var _default = exports["default"] = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
   d: "M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
 }), 'Edit');
+
+/***/ }),
+
+/***/ "./node_modules/@mui/icons-material/MoreVert.js":
+/*!******************************************************!*\
+  !*** ./node_modules/@mui/icons-material/MoreVert.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+"use client";
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var _default = exports["default"] = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"
+}), 'MoreVert');
 
 /***/ }),
 
@@ -9465,29 +9465,52 @@ table{
 font-family: Raleway;
 font-size: 17px;
 }
+td {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    color:rosybrown;
+  }
+#fl{
+    display:flex;
+    /* justify-content: end; */
+    margin-right: 139px;
+}
+#fl > p{
+    margin-right:4px ;
+}
+
 /*Model Box*/
 #bo {
     display: flex;
+    font-family: Raleway;
 }
 #bo > img{
-    width: 119px;
-    height: 92px;
+    width: 139px;
+    height: 108px;
     margin-left: 12px;
 }
 #bo > div{
     padding-top: 2px;
-    padding-left: 39px;
+    padding-left: 28px;
 }
 #bo > div >input{
 border: 1px solid rosybrown;
 margin-top: 6px;
 border-radius: 4px;
-width: 227px;
+width: 287px;
 }
+#bo2 > div >input{
+    width: 387px;
+    border: 1px solid rosybrown;
+margin-top: 6px;
+border-radius: 4px;
+    }
 #bo > div >input:hover{
     border: 1px solid blue;
 }
-    `, "",{"version":3,"sources":["webpack://./src/options/options.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;AACA;IACI,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,gBAAgB;AACpB;AACA;AACA,oBAAoB;AACpB,eAAe;AACf;AACA,YAAY;AACZ;IACI,aAAa;AACjB;AACA;IACI,YAAY;IACZ,YAAY;IACZ,iBAAiB;AACrB;AACA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;AACA;AACA,2BAA2B;AAC3B,eAAe;AACf,kBAAkB;AAClB,YAAY;AACZ;AACA;IACI,sBAAsB;AAC1B","sourcesContent":["#his{\r\n    margin-top: 36px;\r\n    text-align: center;\r\n}\r\nh3{\r\n    color:rosybrown;\r\n    text-align: center;\r\n    font-size: 22px;\r\n    margin-top: 23px;\r\n}\r\ntable{\r\nfont-family: Raleway;\r\nfont-size: 17px;\r\n}\r\n/*Model Box*/\r\n#bo {\r\n    display: flex;\r\n}\r\n#bo > img{\r\n    width: 119px;\r\n    height: 92px;\r\n    margin-left: 12px;\r\n}\r\n#bo > div{\r\n    padding-top: 2px;\r\n    padding-left: 39px;\r\n}\r\n#bo > div >input{\r\nborder: 1px solid rosybrown;\r\nmargin-top: 6px;\r\nborder-radius: 4px;\r\nwidth: 227px;\r\n}\r\n#bo > div >input:hover{\r\n    border: 1px solid blue;\r\n}\r\n    "],"sourceRoot":""}]);
+    `, "",{"version":3,"sources":["webpack://./src/options/options.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;AACA;IACI,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,gBAAgB;AACpB;AACA;AACA,oBAAoB;AACpB,eAAe;AACf;AACA;IACI,gBAAgB;IAChB,gBAAgB;IAChB,uBAAuB;IACvB,mBAAmB;IACnB,eAAe;EACjB;AACF;IACI,YAAY;IACZ,0BAA0B;IAC1B,mBAAmB;AACvB;AACA;IACI,iBAAiB;AACrB;;AAEA,YAAY;AACZ;IACI,aAAa;IACb,oBAAoB;AACxB;AACA;IACI,YAAY;IACZ,aAAa;IACb,iBAAiB;AACrB;AACA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;AACA;AACA,2BAA2B;AAC3B,eAAe;AACf,kBAAkB;AAClB,YAAY;AACZ;AACA;IACI,YAAY;IACZ,2BAA2B;AAC/B,eAAe;AACf,kBAAkB;IACd;AACJ;IACI,sBAAsB;AAC1B","sourcesContent":["#his{\r\n    margin-top: 36px;\r\n    text-align: center;\r\n}\r\nh3{\r\n    color:rosybrown;\r\n    text-align: center;\r\n    font-size: 22px;\r\n    margin-top: 23px;\r\n}\r\ntable{\r\nfont-family: Raleway;\r\nfont-size: 17px;\r\n}\r\ntd {\r\n    max-width: 200px;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis; \r\n    white-space: nowrap;\r\n    color:rosybrown;\r\n  }\r\n#fl{\r\n    display:flex;\r\n    /* justify-content: end; */\r\n    margin-right: 139px;\r\n}\r\n#fl > p{\r\n    margin-right:4px ;\r\n}\r\n\r\n/*Model Box*/\r\n#bo {\r\n    display: flex;\r\n    font-family: Raleway;\r\n}\r\n#bo > img{\r\n    width: 139px;\r\n    height: 108px;\r\n    margin-left: 12px;\r\n}\r\n#bo > div{\r\n    padding-top: 2px;\r\n    padding-left: 28px;\r\n}\r\n#bo > div >input{\r\nborder: 1px solid rosybrown;\r\nmargin-top: 6px;\r\nborder-radius: 4px;\r\nwidth: 287px;\r\n}\r\n#bo2 > div >input{\r\n    width: 387px;\r\n    border: 1px solid rosybrown;\r\nmargin-top: 6px;\r\nborder-radius: 4px;\r\n    }\r\n#bo > div >input:hover{\r\n    border: 1px solid blue;\r\n}\r\n    "],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -50095,9 +50118,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/Edit */ "./node_modules/@mui/icons-material/Edit.js");
-/* harmony import */ var _mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/Delete */ "./node_modules/@mui/icons-material/Delete.js");
-/* harmony import */ var _mui_icons_material_AccountBox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/AccountBox */ "./node_modules/@mui/icons-material/AccountBox.js");
+/* harmony import */ var _mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/Edit */ "./node_modules/@mui/icons-material/Edit.js");
+/* harmony import */ var _mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/Delete */ "./node_modules/@mui/icons-material/Delete.js");
+/* harmony import */ var _mui_icons_material_MoreVert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/MoreVert */ "./node_modules/@mui/icons-material/MoreVert.js");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
 /* harmony import */ var react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Modal */ "./node_modules/react-bootstrap/esm/Modal.js");
@@ -50112,87 +50135,183 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const MyComponent = () => {
-    const [bookmarks, setBookmarks] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+    const [shortcutName, setShortcutName] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+    const [url, setUrl] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+    const [isValidShortcut, setIsValidShortcut] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
+    const [touched, setTouched] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+    const [touched2, setTouched2] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+    const [existingShortcuts, setExistingShortcuts] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
     const [show, setShow] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-    const [selectedBookmark, setSelectedBookmark] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-    const [linkName, setLinkName] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+    const [show2, setShow2] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+    const [editShortcutIndex, setEditShortcutIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+    const [listOfShortcuts, setListOfShortcuts] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
     (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-        const storedBookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
-        setBookmarks(storedBookmarks);
+        const storedShortcuts = Object.keys(localStorage).filter((key) => key.startsWith('r/'));
+        setExistingShortcuts(storedShortcuts);
     }, []);
-    const saveBookmark = () => {
-        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-            const currentTab = tabs[0];
-            const url = currentTab.url;
-            const logo = fetchLogoForUrl(url);
-            const newBookmark = { url, logo, name: linkName };
-            const newBookmarks = [...bookmarks, newBookmark];
-            setBookmarks(newBookmarks);
-            localStorage.setItem('bookmarks', JSON.stringify(newBookmarks));
+    const handleCreate = () => {
+        if (shortcutNameExists(shortcutName)) {
+            alert("Shortcut name already exists. Please choose a different name.");
+            return;
+        }
+        if (isValidShortcut) {
+            const shortcutNameWithoutPrefix = shortcutName.startsWith('r/') ? shortcutName.slice(2) : shortcutName;
+            const uniqueName = `r/${shortcutNameWithoutPrefix}`;
+            if (editShortcutIndex !== null) {
+                const editedShortcuts = [...existingShortcuts];
+                const oldShortcut = existingShortcuts[editShortcutIndex];
+                editedShortcuts[editShortcutIndex] = uniqueName;
+                setExistingShortcuts(editedShortcuts);
+                const oldData = JSON.parse(localStorage.getItem(oldShortcut));
+                localStorage.setItem(uniqueName, JSON.stringify(Object.assign(Object.assign({}, oldData), { url })));
+                localStorage.removeItem(oldShortcut);
+            }
+            else if (existingShortcuts.includes(uniqueName)) {
+                setTouched2(true);
+                alert('Shortcut with the same name already exists.');
+                return;
+            }
+            const storedShortcuts = Object.keys(localStorage).filter((key) => key.startsWith('r/'));
+            if (storedShortcuts.includes(uniqueName)) {
+                setTouched2(true);
+                alert('Shortcut Update name Store.');
+                return;
+            }
+            const bookmarkData = { uniqueName, url };
+            localStorage.setItem(uniqueName, JSON.stringify(bookmarkData));
+            alert('Congratulations! Shortcut created successfully.');
+            handleClose();
+            chrome.runtime.sendMessage({ action: 'storeBookmark', bookmarkData });
+        }
+        else {
+            alert('Invalid shortcut name. Please start with "r/".');
+        }
+    };
+    const handleEdit = (index) => {
+        const shortcut = existingShortcuts[index];
+        const shortcutData = JSON.parse(localStorage.getItem(shortcut));
+        setShortcutName(shortcut);
+        setUrl(shortcutData.url);
+        setEditShortcutIndex(index);
+        handleShow();
+        chrome.runtime.sendMessage({
+            action: 'storeBookmark',
+            bookmarkData: {
+                uniqueName: shortcut,
+                url: shortcutData.url,
+            },
+        }, (response) => {
+            console.log(response.message);
+            chrome.runtime.sendMessage({ action: 'getBookmarks' }, (response) => {
+                const updatedBookmarks = response.bookmarks;
+                console.log('Updated Bookmarks:', updatedBookmarks);
+                updateDisplay(updatedBookmarks);
+            });
         });
     };
-    const fetchLogoForUrl = (url) => {
-        return 'https://example.com/logo.png';
+    const updateDisplay = (bookmarks) => {
+        console.log('Displaying updated data:', bookmarks);
+    };
+    const handleDelete = (index) => {
+        const shortcut = existingShortcuts[index];
+        localStorage.removeItem(shortcut);
+        const updatedShortcuts = existingShortcuts.filter((_, i) => i !== index);
+        setExistingShortcuts(updatedShortcuts);
+        chrome.runtime.sendMessage({ action: 'shortcutDeleted', shortcut }, (response) => {
+            console.log(response.message);
+        });
+    };
+    const shortcutNameExists = (name) => {
+        return listOfShortcuts.some((shortcut) => shortcut.name === name);
     };
     const handleClose = () => {
+        setShortcutName('');
+        setUrl('');
+        setTouched(false);
+        setTouched2(false);
+        setEditShortcutIndex(null);
         setShow(false);
-        setSelectedBookmark(null);
     };
-    const handleShow = (index) => {
-        setSelectedBookmark(index);
+    const handleClose2 = () => {
+        setShortcutName('');
+        setUrl('');
+        setShow2(false);
+    };
+    const handleShow = () => {
         setShow(true);
-        setLinkName(bookmarks[index].name);
     };
-    const handleClick = () => {
-        if (selectedBookmark !== null) {
-            const updatedBookmarks = [...bookmarks];
-            updatedBookmarks[selectedBookmark].name = linkName;
-            setBookmarks(updatedBookmarks);
-            localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
-        }
-        setShow(false);
-        setSelectedBookmark(null);
+    const handleShow2 = () => {
+        setShow2(true);
     };
-    const onDeleteBookmark = (index) => {
-        const updatedBookmarks = [...bookmarks];
-        updatedBookmarks.splice(index, 1);
-        setBookmarks(updatedBookmarks);
-        localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
+    const handleShortcutNameChange = (e) => {
+        setTouched(true);
+        setShortcutName(e.target.value);
+        setIsValidShortcut(e.target.value.startsWith('r/'));
     };
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Open Side to Panel see All Bookmarks:"),
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Open Side Panel to See All Shortcuts:"),
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { id: "his" },
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("table", { style: { width: "100%" } },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { id: "fl" },
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null,
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", className: "rounded border border-gray-300 rounded-md py-1 px-1 pr-10 focus:outline-none focus:border-blue-500", placeholder: "Search" }),
+                    ' '),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null,
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { style: {
+                            borderRadius: '4px',
+                            backgroundColor: 'blue',
+                            color: 'white',
+                            border: 'none',
+                            height: '33px',
+                            width: '68px',
+                        }, onClick: handleShow2 }, "Create")),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null,
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { style: {
+                            borderRadius: '4px',
+                            color: 'black',
+                            border: 'none',
+                            height: '33px',
+                            width: '38px',
+                        } },
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_MoreVert__WEBPACK_IMPORTED_MODULE_4__["default"], null)))),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("table", { style: { width: '90%' } },
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("thead", null,
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", null,
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", { rowSpan: 2 }, "No"),
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", { colSpan: 2 }, "Bookmarks"),
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", { rowSpan: 2 }, "Items")),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", null,
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Rename"),
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Url"))),
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tbody", null, bookmarks.map((bookmark, index) => (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", { key: index },
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, index + 1),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null,
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", { href: bookmark.url, target: "_blank", rel: "noopener noreferrer", style: { textDecoration: 'none', color: '#5d5d5d' } }, bookmark.name)),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", { style: { width: '345px' } },
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", { href: bookmark.url, target: "_blank", rel: "noopener noreferrer", style: { textDecoration: 'none', color: '#5d5d5d' } },
-                            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", { src: bookmark.logo, width: "20", height: "20" }),
-                            bookmark.url)),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null,
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_4__["default"], { style: { fontSize: '18px', cursor: 'pointer' }, onClick: () => handleShow(index) }),
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_5__["default"], { style: { color: 'red', cursor: 'pointer' }, onClick: () => onDeleteBookmark(index) }),
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_AccountBox__WEBPACK_IMPORTED_MODULE_6__["default"], { style: { color: 'blue' } })))))))),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "SHORTCUT"),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "DESTINATION"),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Edit"),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Delete"))),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tbody", null, existingShortcuts.map((shortcut, index) => {
+                    const shortcutData = JSON.parse(localStorage.getItem(shortcut));
+                    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", { key: shortcut },
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, shortcut),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, shortcutData.url),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null,
+                            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_5__["default"], { style: { fontSize: '16px', cursor: 'pointer' }, onClick: () => handleEdit(index) })),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null,
+                            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_6__["default"], { style: { fontSize: '19px', color: 'red', cursor: 'pointer' }, onClick: () => handleDelete(index) }))));
+                })))),
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_7__["default"], { show: show, onHide: handleClose, animation: false },
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_7__["default"].Body, { id: "bo" },
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", { src: "./icon.png", alt: "" }),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", { src: "./icon3.png", alt: "" }),
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", { style: { fontSize: "18px" } }, "Bookmark added"),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", value: linkName, onChange: (e) => setLinkName(e.target.value) }),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", value: selectedBookmark !== null ? bookmarks[selectedBookmark].url : '' }))),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", { style: { fontSize: '18px' } }, editShortcutIndex !== null ? 'Edit Shortcut' : 'Create Shortcut'),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", placeholder: "shortcut-name", value: shortcutName, onChange: handleShortcutNameChange, style: { fontSize: '14px' } }),
+                    touched && !isValidShortcut && (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", { className: "text-red-500 text-sm" }, "Shortcut must start with \"r/\".")),
+                    touched2 && !isValidShortcut && (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", { className: "text-red-500 text-sm" }, "Shortcut with the same name already exists.")),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", placeholder: "url", value: url, onChange: (e) => setUrl(e.target.value), style: { fontSize: '14px' } }))),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_7__["default"].Footer, null,
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__["default"], { variant: "primary", onClick: handleClick }, "Done"),
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__["default"], { variant: "danger", onClick: handleClose }, "Remove")))));
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__["default"], { variant: "danger", onClick: handleClose }, "Cancel"),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__["default"], { variant: "primary", style: { backgroundColor: 'blue', fontSize: '14px' }, onClick: handleCreate }, editShortcutIndex !== null ? 'Update' : 'Create'))),
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_7__["default"], { show: show2, onHide: handleClose2, animation: false },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_7__["default"].Body, { id: "bo" },
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", { src: "./icon2.png", alt: "" }),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null,
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", { style: { fontSize: '18px' } }, "Insert"),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", placeholder: "shortcut-name", value: shortcutName, onChange: (e) => setShortcutName(e.target.value), style: { fontSize: '14px' } }),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", { type: "text", placeholder: "url", value: url, onChange: (e) => setUrl(e.target.value), style: { fontSize: '14px' } }))),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_7__["default"].Footer, null,
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__["default"], { variant: "danger", onClick: handleClose2 }, "Cancel"),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__["default"], { variant: "primary", style: { backgroundColor: 'blue', fontSize: '14px' }, onClick: handleCreate, disabled: !shortcutName.startsWith('r/') }, "Insert")))));
 };
 const container = document.createElement('div');
 document.body.appendChild(container);

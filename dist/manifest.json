@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Bookmark Extension",
-  "description": "Save bookmarks to Chrome extension",
+  "name": "Shortcuts",
+  "description": "Shortcuts to Chrome extension",
   "version": "1.0.0",
   "action": {
     "default_popup": "bookmark.html",
@@ -13,7 +13,7 @@
     "48": "icon3.png",
     "128": "icon3.png"
   },
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage", "tabs", "activeTab", "bookmarks"],
   "options_page": "options.html",
   "background": {
     "service_worker": "background.js"
@@ -23,6 +23,9 @@
       "matches": ["<all_urls>"],
       "js": ["contentScript.js"]
     }
-  ]
+  ],
+  "omnibox": {
+    "keyword": "s"
+  }
 
 }

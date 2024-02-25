@@ -1,168 +1,120 @@
 import React, { useState, useEffect } from 'react';
-import StarPurple500Icon from '@mui/icons-material/StarPurple500';
-import EditIcon from '@mui/icons-material/Edit';
-import MicIcon from '@mui/icons-material/Mic';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import './bookmark.css';
 
-function Bookmark() {
-  const [bookmarks, setBookmarks] = useState([]);
-  const [show, setShow] = useState(false);
-  const [selectedBookmark, setSelectedBookmark] = useState(null);
-  const [linkName, setLinkName] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
+const App = () => {
+  const [shortcutName, setShortcutName] = useState('');
+  const [url, setUrl] = useState('');
+  const [isValidShortcut, setIsValidShortcut] = useState(true);
+  const [touched, setTouched] = useState(false);
+  const [touched2, setTouched2] = useState(false);
+  const [existingShortcuts, setExistingShortcuts] = useState([]);
 
   useEffect(() => {
-    const storedBookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
-    setBookmarks(storedBookmarks);
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const currentUrl = tabs[0]?.url || '';
+      setUrl(currentUrl);
+    });
+
+    const storedShortcuts = Object.keys(localStorage).filter((key) => key.startsWith('r/'));
+    setExistingShortcuts(storedShortcuts);
   }, []);
 
-  const saveBookmark = () => {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      const currentTab = tabs[0];
-      const url = currentTab.url;
-      const logo = fetchLogoForUrl(url);
-      const newBookmark = { url, logo, name: linkName };
-      const newBookmarks = [...bookmarks, newBookmark];
-      setBookmarks(newBookmarks);
-      localStorage.setItem('bookmarks', JSON.stringify(newBookmarks));
-
-      chrome.runtime.sendMessage({ action: 'saveBookmark', bookmark: newBookmark });
-    });
-  };
+  const handleCreate = () => {
+    if (isValidShortcut) {
+      const shortcutNameWithoutPrefix = shortcutName.startsWith('r/') ? shortcutName.slice(2) : shortcutName;
+      const uniqueName = `r/${shortcutNameWithoutPrefix}`;
   
-  const fetchLogoForUrl = (url) => {
-    return 'https://example.com/logo.png';
-  };
+      if (existingShortcuts.includes(uniqueName)) {
+        setTouched2(true);
+        alert('Shortcut with the same name already exists.');
+      } else {
+        const bookmarkData = { uniqueName, url };
+        localStorage.setItem(uniqueName, JSON.stringify(bookmarkData));
+        console.log('Stored Bookmark Data:', bookmarkData);
+        alert('Congratulations! Shortcut created successfully.');
 
-  const handleClose = () => {
-    setShow(false);
-    setSelectedBookmark(null);
-  };
-
-  const handleShow = (index) => {
-    setSelectedBookmark(index);
-    setShow(true);
-    setLinkName(bookmarks[index].name);
-  };
-
-  const handleClick = () => {
-    if (selectedBookmark !== null) {
-      const updatedBookmarks = [...bookmarks];
-      updatedBookmarks[selectedBookmark].name = linkName;
-      setBookmarks(updatedBookmarks);
-      localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
-
-      const bookmarkUrl = updatedBookmarks[selectedBookmark].url;
-      chrome.runtime.sendMessage({ action: 'handleSearch', searchInput: linkName });
- }
-    setShow(false);
-    setSelectedBookmark(null);
-  };
-  
-  // const searchAndOpenBookmark = (searchTerm) => {
-  //   const matchingBookmark = bookmarks.find(bookmark => bookmark.name === searchTerm);
-  
-  //   if (matchingBookmark) {
-  //     chrome.tabs.create({ url: matchingBookmark.url });
-  //   }
-  // };
-  
-  const searchAndOpenGoogle = (searchTerm) => {
-    const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchTerm)}`;
-    chrome.tabs.create({ url: googleSearchUrl });
-  };
-  
-  const handleSearch = () => {
-    chrome.runtime.sendMessage({ action: 'handleSearch', searchInput: searchTerm });
-    const matchingBookmark = bookmarks.find(bookmark => bookmark.name === searchTerm);
-      if (matchingBookmark) {
-      chrome.tabs.create({ url: matchingBookmark.url });
+        chrome.runtime.sendMessage({ action: 'storeBookmark', bookmarkData });
+      
+      }
     } else {
-      console.log('No matching bookmark found. Opening Google search page:', searchTerm);
-      searchAndOpenGoogle(searchTerm);
+      alert('Invalid shortcut name. Please start with "r/".');
     }
   };
-    
-return (
-    <>
-      <div className="text-center">
-        <h2 style={{ textDecoration: 'underline', marginTop: '8px' }}>Bookmark Extension:</h2>
-        <button onClick={() => saveBookmark()}>
-          Save Bookmark
-          <StarPurple500Icon className="text-purple-500 hover:text-blue-500" />
-        </button>
-        <br/>
-        <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder='Google Search...'
-          />
-          <button onClick={handleSearch}>:<MicIcon/></button>
-      </div>
-      <hr />
-      <div style={{ marginTop: '23px' }}>
-      <span>
-          <h3>Bookmarks:</h3>
-          <h3 style={{ color: 'black' }}>More</h3>
-        </span>
-       <div className="rt">
-          <table>
-            <thead>
-              <tr>
-                <th colSpan={2}>Bookmark</th>
-                <th>Items</th>
-              </tr>
-            </thead>
-            <tbody>
-              {bookmarks.map((bookmark, index) => (
-                <tr key={index}>
-                  <td>
-                    <img src={bookmark.logo} alt="Logo" width="20" height="20" />
-                  </td>
-                  <td style={{ width: '345px' }}>
-                    <a
-                      href={bookmark.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ textDecoration: 'none', color: '#5d5d5d' }}
-                    >
-                      {bookmark.name}
-                    </a>
-                  </td>
-                  <td>
-                    <EditIcon style={{ fontSize: '13px', cursor: 'pointer' }} onClick={() => handleShow(index)} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
 
-      <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Body id="bo">
-          <img src="./icon3.png" alt="" />
-          <div>
-            <h2 style={{ fontSize: "18px" }}>Bookmark added</h2>
-            <input type="text" value={linkName} onChange={(e) => setLinkName(e.target.value)} />
-            <input type="text" value={selectedBookmark !== null ? bookmarks[selectedBookmark].url : ''} />
+useEffect(() => {
+    setIsValidShortcut(shortcutName.startsWith('r/'));
+  }, [shortcutName]);
+
+const handleManageClick = () => {
+    chrome.tabs.create({ url: chrome.runtime.getURL('options.html') });
+  };
+
+ const handleShortcutNameChange = (e) => {
+    setTouched(true);
+    setShortcutName(e.target.value);
+  };
+
+  return (
+    <>
+      <div className="p-4 flex flex-col justify-center">
+        <h3 className="text-xl text-center mb-4 flex items-center justify-between" style={{ fontSize: "14px" }}>
+          <div className="flex items-center">
+            <img src="./icon3.png" alt="" id="img" className="mr-2" />
+            <p style={{ fontSize: "16px", color: "#202124" }}>Shortcuts</p>
           </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClick}>
-            Done
-          </Button>
-          <Button variant="danger" onClick={handleClose}>
-            Remove
-          </Button>
-        </Modal.Footer>
-      </Modal>
+
+          <p style={{ color: "#202124", cursor: "pointer",textDecoration:"underline" }} onClick={handleManageClick}>
+            Manage:
+          </p>
+        </h3>
+        <hr />
+        <input
+          type="text"
+          placeholder="shortcut-name"
+          value={shortcutName}
+          onChange={handleShortcutNameChange}
+          className={`py-1 px-9 border border-gray-300 rounded focus:outline-none focus:border-blue-500 mb-2 w-full ${(touched2 && !isValidShortcut) ? 'border-red-500' : ''
+            }`}
+          style={{ fontSize: '14px' }}
+        />
+        {touched && !isValidShortcut && (
+          <p className="text-red-500 text-sm mb-2">Shortcut must start with "r/".</p>
+        )}
+
+        {touched2 && !isValidShortcut && (
+          <p className="text-red-500 text-sm mb-2">Shortcut with the same name already exists.</p>
+        )}
+        <input
+          type="text"
+          placeholder="url"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+          className="py-1 px-9 border border-gray-300 rounded focus:outline-none focus:border-blue-500 mb-2 w-full"
+          style={{ fontSize: '14px' }}
+        />
+
+      </div>
+      <div className="flex justify-end" style={{ marginRight: "23px" }}>
+        <button
+          className="bg-white text-black py-1 px-4 mr-2 border border-brown-500 rounded focus:outline-none "
+          style={{ borderColor: '#f7f9fd', fontSize: '14px' }}
+        >
+          Cancel
+        </button>
+        <button
+          onClick={handleCreate}
+          className={`bg-blue-800 text-white py-1 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 rounded ${!isValidShortcut || existingShortcuts.includes(`r/${shortcutName}`) ? 'cursor-not-allowed' : ''
+            }`}
+          style={{ fontSize: '14px' }}
+          disabled={!isValidShortcut || existingShortcuts.includes(`r/${shortcutName}`)}
+        >
+          Create
+        </button>
+
+      </div>
     </>
   );
-}
+};
 
-export default Bookmark;
+export default App;
+

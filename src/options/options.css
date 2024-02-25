@@ -12,25 +12,48 @@ table{
 font-family: Raleway;
 font-size: 17px;
 }
+td {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    color:rosybrown;
+  }
+#fl{
+    display:flex;
+    /* justify-content: end; */
+    margin-right: 139px;
+}
+#fl > p{
+    margin-right:4px ;
+}
+
 /*Model Box*/
 #bo {
     display: flex;
+    font-family: Raleway;
 }
 #bo > img{
-    width: 119px;
-    height: 92px;
+    width: 139px;
+    height: 108px;
     margin-left: 12px;
 }
 #bo > div{
     padding-top: 2px;
-    padding-left: 39px;
+    padding-left: 28px;
 }
 #bo > div >input{
 border: 1px solid rosybrown;
 margin-top: 6px;
 border-radius: 4px;
-width: 227px;
+width: 287px;
 }
+#bo2 > div >input{
+    width: 387px;
+    border: 1px solid rosybrown;
+margin-top: 6px;
+border-radius: 4px;
+    }
 #bo > div >input:hover{
     border: 1px solid blue;
 }
