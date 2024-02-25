@@ -21,7 +21,7 @@ td {
   }
 #fl{
     display:flex;
-    /* justify-content: end; */
+    justify-content: end; 
     margin-right: 139px;
 }
 #fl > p{

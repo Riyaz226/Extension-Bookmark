@@ -31,7 +31,7 @@ const App = () => {
         const bookmarkData = { uniqueName, url };
         localStorage.setItem(uniqueName, JSON.stringify(bookmarkData));
         console.log('Stored Bookmark Data:', bookmarkData);
-        alert('Congratulations! Shortcut created successfully.');
+        alert('Congratulations! Shortcut created successfully. \uD83D\uDC4D'); 
 
         chrome.runtime.sendMessage({ action: 'storeBookmark', bookmarkData });
       
